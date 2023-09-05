@@ -833,7 +833,7 @@ RegisterNetEvent('hiype-construction:client:craft-menu-return', function(data)
             disableMouse = false,
             disableCombat = true
         }, {}, {}, {}, function()
-            RemoveAllItems(data)
+            RemoveAllItems(Config.ItemRequirements[data.name])
             TriggerServerEvent('hiype-construction:server:addItem', data.name, 1)
         end, function() end
     )
